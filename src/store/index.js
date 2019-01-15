@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './modules/app'
-import TagView from './modules/tagsView'
+import xRouters from './modules/xRouters'
+import tagsView from './modules/tagsView'
 import getters from './getters'
 
 Vue.use(Vuex)
@@ -9,7 +10,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   modules: {
     App,
-    TagView
+    xRouters,
+    tagsView
   },
   getters
 })

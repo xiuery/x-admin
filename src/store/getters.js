@@ -1,9 +1,11 @@
 const getters = {
-  sidebar: state => state.app.sidebar,
-  language: state => state.app.language,
-  size: state => state.app.size,
-  device: state => state.app.device,
+  sidebar: state => state.App.sidebar,
+  language: state => state.App.language,
+  size: state => state.App.size,
+  device: state => state.App.device,
   visitedViews: state => state.tagsView.visitedViews,
-  cachedViews: state => state.tagsView.cachedViews
+  cachedViews: state => state.tagsView.cachedViews,
+  defaultRouters: state => state.xRouters.defaultRouters,
+  addRouters: state => state.xRouters.addRouters
 }
 export default getters

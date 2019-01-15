@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+// layout
+import Layout from '@/views/Layout'
+
 Vue.use(Router)
 
 /**
@@ -17,16 +20,33 @@ Vue.use(Router)
   }
  **/
 
-export const constantRouterMap = [
+export const constantRouter = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
-    component: () => import('@/views/Home')
+    component: () => import('@/views/Home'),
+    hidden: true
+  },
+  {
+    path: '',
+    name: 'dashboard',
+    component: Layout,
+    redirect: '/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        name: 'dashboard',
+        component: () => import('@/views/Dashboard'),
+        meta: { title: 'Dashboard', icon: 'el-icon-setting' }
+      }
+    ]
   }
 ]
+
+export const asyncRouter = []
 
 export default new Router({
   // mode: 'history', //后端支持可开
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRouterMap
+  routes: constantRouter
 })
