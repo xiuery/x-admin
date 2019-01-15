@@ -1,6 +1,6 @@
 <template>
   <el-container class="app-wrapper">
-    <el-aside style="width: 180px;">
+    <el-aside class="sidebar-main">
       <sidebar class="sidebar-container"/>
     </el-aside>
 
@@ -41,7 +41,7 @@ export default {
       top: 0;
     }
     .header-container{
-      height: 85px !important;
+      height: 84px !important;
       width: 100%;
       padding: 0 0;
     }

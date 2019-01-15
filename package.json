@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "echarts": "^4.2.0-rc.2",
     "element-ui": "^2.4.11",
     "js-cookie": "^2.2.0",
     "normalize.css": "^8.0.1",

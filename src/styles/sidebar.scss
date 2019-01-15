@@ -7,7 +7,10 @@
     margin-left: $sideBarWidth;
     position: relative;
   }
-
+  // 侧边栏主体，不设置默认300px
+  .sidebar-main {
+    width: $sideBarWidth !important;
+  }
   // 侧边栏
   .sidebar-container {
     transition: width 0.28s;
