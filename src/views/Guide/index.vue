@@ -1,14 +1,14 @@
 <template>
   <div class="home">
-    <div class="about">
-      <h5>{{ $t('home.main') }}</h5>
+    <div>
+      <h5>1234567890</h5>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Guide'
 }
 </script>
 

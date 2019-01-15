@@ -38,7 +38,7 @@ const lineChartData = {
 }
 
 export default {
-  name: 'DashboardAdmin',
+  name: 'Dashboard',
   components: {
     LineChart,
     RadarChart,

@@ -28,8 +28,19 @@ export const constantRouter = [
     hidden: true
   },
   {
+    // 特殊路由
+    path: '/redirect',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/redirect/:path*',
+        component: () => import('@/views/Redirect')
+      }
+    ]
+  },
+  {
     path: '',
-    name: 'dashboard',
     component: Layout,
     redirect: '/dashboard',
     children: [
@@ -37,7 +48,20 @@ export const constantRouter = [
         path: 'dashboard',
         name: 'dashboard',
         component: () => import('@/views/Dashboard'),
-        meta: { title: 'Dashboard', icon: 'el-icon-setting' }
+        meta: { title: 'dashboard', icon: 'el-icon-setting' }
+      }
+    ]
+  },
+  {
+    path: '/guide',
+    component: Layout,
+    redirect: 'noredirect',
+    children: [
+      {
+        path: '',
+        name: 'guide',
+        component: () => import('@/views/Guide'),
+        meta: { title: 'guide', icon: 'el-icon-message' }
       }
     ]
   }

@@ -1,5 +1,15 @@
 export default {
   home: {
     main: '应用'
+  },
+  route: {
+    dashboard: '仪表盘',
+    guide: '指南'
+  },
+  tagsView: {
+    refresh: '刷新',
+    close: '关闭',
+    closeOthers: '关闭其他',
+    closeAll: '关闭所有'
   }
 }

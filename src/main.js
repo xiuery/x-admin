@@ -9,6 +9,9 @@ import './global'
 // internationalization
 import i18n from './lang'
 
+// debug
+console.log(store.getters)
+
 Vue.config.productionTip = false
 
 new Vue({

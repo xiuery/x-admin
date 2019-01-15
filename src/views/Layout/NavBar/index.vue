@@ -12,7 +12,7 @@
 
       <el-dropdown class="avatar-container right-menu-item" trigger="hover">
         <div class="avatar-wrapper">
-          <!--<img src="../../../assets/avatar.png" class="user-avatar">-->
+          <img src="../../../assets/avatar.png" class="user-avatar">
         </div>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item>我的消息</el-dropdown-item>
@@ -83,13 +83,13 @@ export default {
       height: 50px;
       margin-right: 30px;
       .avatar-wrapper {
-        margin-top: 2px;
+        margin-top: 5px;
         position: relative;
         .user-avatar {
           cursor: pointer;
           width: 40px;
           height: 40px;
-          border-radius: 10px;
+          border-radius: 20px;
         }
       }
     }
