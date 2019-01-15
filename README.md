@@ -40,5 +40,14 @@ npm run test:e2e    # Run your end-to-end tests
 npm run test:unit   # Run your unit tests
 ```
 
+### Project integration
+```
+vue ^2.5.21
+router ^3.0.1
+vuex ^3.0.1
+element-ui ^2.4.11
+vue-i18n ^8.7.0
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
