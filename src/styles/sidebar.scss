@@ -59,11 +59,11 @@
 
   .hideSidebar {
     .sidebar-container {
-      width: 36px !important;
+      width: 40px !important;
     }
 
     .sidebar-main {
-      width: 36px !important;
+      width: 40px !important;
     }
 
     .submenu-title-noDropdown {
@@ -120,6 +120,13 @@
   .mobile {
     .sidebar-main {
       width: 0 !important;
+    }
+
+    // 通过兄弟节点选取：当蒙层drawer-bg出现后设置样式
+    .drawer-bg + .sidebar-main {
+      width: 180px !important;
+      position: absolute;
+      height: 100%;
     }
 
     .sidebar-container {

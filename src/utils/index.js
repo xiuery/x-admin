@@ -1,7 +1,8 @@
-/**
- * Created by jiachenpan on 16/11/18.
- */
+/* toolkit */
 
+/**
+ * 时间格式化
+ */
 export function parseTime (time, cFormat) {
   if (arguments.length === 0) {
     return null
@@ -14,7 +15,7 @@ export function parseTime (time, cFormat) {
     if (('' + time).length === 10) time = parseInt(time) * 1000
     date = new Date(time)
   }
-  const formatObj = {
+  const formatObject = {
     y: date.getFullYear(),
     m: date.getMonth() + 1,
     d: date.getDate(),
@@ -23,8 +24,8 @@ export function parseTime (time, cFormat) {
     s: date.getSeconds(),
     a: date.getDay()
   }
-  const timeStr = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key) => {
-    let value = formatObj[key]
+  const timeString = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key) => {
+    let value = formatObject[key]
     // Note: getDay() returns 0 on Sunday
     if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
     if (result.length > 0 && value < 10) {
@@ -32,7 +33,7 @@ export function parseTime (time, cFormat) {
     }
     return value || 0
   })
-  return timeStr
+  return timeString
 }
 
 export function formatTime (time, option) {
@@ -69,31 +70,28 @@ export function formatTime (time, option) {
   }
 }
 
-// 格式化时间
+/**
+ * url解析
+ */
 export function getQueryObject (url) {
   url = url == null ? window.location.href : url
   const search = url.substring(url.lastIndexOf('?') + 1)
-  const obj = {}
+  const result = {}
   const reg = /([^?&=]+)=([^?&=]*)/g
   search.replace(reg, (rs, $1, $2) => {
     const name = decodeURIComponent($1)
     let val = decodeURIComponent($2)
     val = String(val)
-    obj[name] = val
+    result[name] = val
     return rs
   })
-  return obj
+  return result
 }
 
-/**
- *get getByteLen
- * @param {Sting} val input value
- * @returns {number} output value
- */
-export function getByteLen (val) {
+export function getByteLength (value) {
   let len = 0
-  for (let i = 0; i < val.length; i++) {
-    if (val[i].match(/[^\x00-\xff]/gi) != null) {
+  for (let i = 0; i < value.length; i++) {
+    if (value[i].match(/[^\x00-\xff]/gi) != null) {
       len += 1
     } else {
       len += 0.5
@@ -122,7 +120,7 @@ export function param (json) {
   ).join('&')
 }
 
-export function param2Obj (url) {
+export function param2Object (url) {
   const search = url.split('?')[1]
   if (!search) {
     return {}
@@ -282,10 +280,16 @@ export function deepClone (source) {
   return targetObj
 }
 
-export function uniqueArr (arr) {
-  return Array.from(new Set(arr))
+/**
+ * 数组去重
+ */
+export function uniqueArray (array) {
+  return Array.from(new Set(array))
 }
 
+/**
+ * 外部链接路径
+ */
 export function isExternal (path) {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
