@@ -128,9 +128,9 @@ export default {
       const left = e.clientX - offsetLeft + 15 // 15: margin right
 
       if (left > maxLeft) {
-        this.left = maxLeft
+        this.left = maxLeft + offsetLeft
       } else {
-        this.left = left
+        this.left = left + offsetLeft
       }
       this.top = e.clientY
 
