@@ -49,5 +49,41 @@ element-ui ^2.4.11
 vue-i18n ^8.7.0
 ```
 
+### Global svg-icon
+```
+# 安装依赖
+npm install svg-sprite-loader --save-dev
+
+# vue.config.js
+chainWebpack: config => {
+    // 重点:删除默认配置中处理svg
+    config.module.rules.delete('svg')
+    config.module
+      .rule('svg-sprite-loader')
+      .test(/\.svg$/)
+      .include
+      .add(resolve('src/icons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+}
+
+# components
+src/components/SvgIcon/index.vue
+
+# global
+import Vue from 'vue'
+import SvgIcon from '@/components/SvgIcon'
+
+Vue.component('icon-x', SvgIcon)
+
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const req = require.context('../icons', false, /\.svg$/)
+requireAll(req)
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

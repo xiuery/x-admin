@@ -1,5 +1,11 @@
 // vue.config.js
 // https://cli.vuejs.org/zh/config/
+const path = require('path')
+
+function resolve (dir) {
+  return path.join(__dirname, '.', dir)
+}
+
 module.exports = {
   /**
    * publicPath：部署时URL中的path
@@ -85,7 +91,7 @@ module.exports = {
    *  default：false
    *  如果你构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性
    */
-  integrity: false
+  integrity: false,
   /**
    * configureWebpack：https://cli.vuejs.org/guide/webpack.html
    *  default：Object | Function
@@ -95,12 +101,21 @@ module.exports = {
    * chainWebpack：
    *  default：Function
    */
-  // chainWebpack: config => {
-  //  config.module.rule('vue').use('vue-loader').loader('vue-loader').tap(options => {
-  //    // 修改它的选项
-  //    return options
-  //  })
-  // }
+  chainWebpack: config => {
+    // 重点:删除默认配置中处理svg
+    config.module.rules.delete('svg')
+    config.module
+      .rule('svg-sprite-loader')
+      .test(/\.svg$/)
+      .include
+      .add(resolve('src/icons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+  }
   /**
    * css：
    *  modules：false

@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    <div>
-      <h5>1234567890</h5>
-    </div>
+    <icon-x icon-class="username" />
+    <h5>1234567890</h5>
   </div>
 </template>
 
