@@ -48,7 +48,7 @@ export const constantRouter = [
         path: 'dashboard',
         name: 'dashboard',
         component: () => import('@/views/Dashboard'),
-        meta: { title: 'dashboard', icon: 'el-icon-setting' }
+        meta: { title: 'dashboard', icon: 'el-icon-menu' }
       }
     ]
   },
@@ -61,7 +61,7 @@ export const constantRouter = [
         path: '',
         name: 'guide',
         component: () => import('@/views/Guide'),
-        meta: { title: 'guide', icon: 'el-icon-message' }
+        meta: { title: 'guide', icon: 'el-icon-view' }
       }
     ]
   }

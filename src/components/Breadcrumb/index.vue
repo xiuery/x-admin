@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
+  .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link {
+    color: #97a8be;
+  }
   .app-breadcrumb.el-breadcrumb {
     display: inline-block;
     font-size: 14px;

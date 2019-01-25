@@ -1,8 +1,8 @@
 <template>
   <div class="logo">
     <li>
-      <icon-x icon-class="setting"/>
-      <span>xiuery</span>
+      <icon-x icon-class="logo"/>
+      <span>x-admin</span>
     </li>
   </div>
 </template>
@@ -22,13 +22,14 @@ export default {
     background-color: rgb(67, 82, 100);
     li {
       width: 100%;
-      font-size: 14px;
+      font-size: 22px;
       padding: 0 20px;
       cursor: pointer;
       overflow: hidden;
       display: inline-block;
       svg {
-        width: 24px;
+        width: 26px !important;
+        height: 26px !important;
         font-size: 18px;
         margin-right: 5px;
         text-align: center;

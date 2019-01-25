@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <icon-x icon-class="username" />
-    <h5>1234567890</h5>
+    <icon-x icon-class="logo" />
+    <h5>LOGO</h5>
   </div>
 </template>
 
@@ -11,12 +11,17 @@ export default {
 }
 </script>
 
-<style>
+<style rel="stylesheet/scss" lang="scss" scoped>
 .home {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  svg {
+    width: 200px;
+    height: 200px;
+  }
+
 }
 </style>
