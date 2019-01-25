@@ -1,4 +1,44 @@
 # x-admin-refactor
+vue-cli3.0 + vue2.5 + vuex + element-ui
+
+
+### Usage Links
+- [HTTP](https://developer.mozilla.org/zh-CN/docs/Web/HTTP)
+
+
+### code standard
+- js文件统一使用小写驼峰命名方式
+- css文件小写命名方式,多个单词用"-"分隔
+- component,views下目录统一使用大写开头命名方式,主文件使用index其他文件均采用大写开头命名方式
+
+### 目录结构
+```
+├── pubilic                     // html模板
+├── src                         // 源代码
+│   ├── assets                  // 主题 字体等静态资源
+│   ├── components              // 全局公用组件
+│   ├── global                  // 全局指令
+│   ├── icons                   // 项目所有svg icons
+│   ├── lang                    // 国际化 language
+│   ├── store                   // 全局 store管理
+│   ├── styles                  // 全局样式
+│   ├── utils                   // 全局公用方法
+│   ├── views                   // views 所有页面
+│   ├── App.vue                 // 入口页面
+│   ├── main.js                 // 入口文件 加载组件 初始化等
+│   └── router.js               // 路由
+├── .tests                      // 测试
+├── .browserslistrc             // 
+├── .editorconfig               // 
+├── .eslintrc.js                // eslint 配置项
+├── .gitignore                  // git 忽略项
+├── babel.config.js             // 
+├── CHANGELOG                   // 版本升级历史
+├── package.json                // package.json
+├── postcss.config.js           //
+├── README.md                   // README.md
+└── vue.config.js               // vue配置
+```
 
 ### node.js upgrade
 ```
@@ -51,10 +91,10 @@ vue-i18n ^8.7.0
 
 ### Global svg-icon
 ```
-# 安装依赖
+# 1.安装依赖
 npm install svg-sprite-loader --save-dev
 
-# vue.config.js
+# 2.vue.config.js
 chainWebpack: config => {
     // 重点:删除默认配置中处理svg
     config.module.rules.delete('svg')
@@ -71,10 +111,13 @@ chainWebpack: config => {
       })
 }
 
-# components
+# 3.SvgIcon components
 src/components/SvgIcon/index.vue
 
-# global
+# 4.icons
+/src/icons
+
+# 5.global component
 import Vue from 'vue'
 import SvgIcon from '@/components/SvgIcon'
 

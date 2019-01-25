@@ -23,7 +23,7 @@ import Sidebar from './Sidebar'
 import NavBar from './NavBar'
 import AppMain from './AppMain'
 import TagsView from './TagsView'
-import ResizeMixin from './Mixin/ResizeMixin'
+import ResizeMixin from './Mixin/resizeMixin'
 
 export default {
   name: 'Layout',
