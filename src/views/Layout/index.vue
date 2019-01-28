@@ -11,7 +11,7 @@
         <tags-view/>
       </el-header>
 
-      <el-main>
+      <el-main class="app-main">
         <app-main />
       </el-main>
     </el-container>
@@ -78,5 +78,9 @@ export default {
     height: 100%;
     position: absolute;
     z-index: 999;
+  }
+
+  .app-main {
+    background-color: #f0f2f5;
   }
 </style>
