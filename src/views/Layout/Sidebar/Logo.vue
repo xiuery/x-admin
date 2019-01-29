@@ -2,7 +2,7 @@
   <div class="logo">
     <li>
       <icon-x icon-class="logo"/>
-      <span>x-admin</span>
+      <span>{{ $t('logo.title') }}</span>
     </li>
   </div>
 </template>

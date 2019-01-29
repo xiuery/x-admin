@@ -2,6 +2,9 @@ export default {
   home: {
     main: '应用'
   },
+  logo: {
+    title: '后台管理'
+  },
   route: {
     dashboard: '仪表盘',
     guide: '指南'

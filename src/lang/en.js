@@ -2,6 +2,9 @@ export default {
   home: {
     main: 'application'
   },
+  logo: {
+    title: 'Admin'
+  },
   route: {
     dashboard: 'Dashboard',
     guide: 'Guide'
