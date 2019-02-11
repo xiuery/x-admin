@@ -7,7 +7,7 @@ export default {
   },
   route: {
     dashboard: '仪表盘',
-    guide: '指南'
+    guide: '引导页'
   },
   tagsView: {
     refresh: '刷新',
