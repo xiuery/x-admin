@@ -1,4 +1,4 @@
-# x-admin
+# xs-admin
 vue-cli3.0 + vue2.5 + vuex + element-ui
 
 
